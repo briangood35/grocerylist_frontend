@@ -1,0 +1,23 @@
+.Row {
+    display: flex;
+    width: 100%;
+    background-color: #5e646e;
+    padding: 10px;
+    margin: 10px;
+}
+
+p {
+    text-align: center;
+    width: 50%;
+    float: left;
+}
+
+input {
+    width: 25%;
+    float: left;
+}
+
+button {
+    width: 25%;
+    float: left;
+}
