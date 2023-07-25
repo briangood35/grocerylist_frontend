@@ -12,10 +12,16 @@ h1 {
 
 .Item-Box {
   width: 30%;
+  margin: auto;
 }
 
 .center {
   display: flex;
   align-content: center;
   justify-content: center;
+}
+
+.Add-Box {
+  width: 30%;
+  margin: auto;
 }
