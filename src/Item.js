@@ -1,9 +1,9 @@
 import './item.css'
 
-function Item() {
+function Item(props) {
     return (
       <div className='Row'>
-        <p>Item</p>
+        <p>{ props.name }</p>
         <input type="checkbox" />
         <button></button>
       </div>

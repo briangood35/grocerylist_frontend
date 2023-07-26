@@ -25,3 +25,24 @@ h1 {
   width: 30%;
   margin: auto;
 }
+
+.Add-Box  .Row {
+  display: flex;
+  width: 100%;
+  background-color: #4e545e;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 6px;
+}
+
+.Add-Box  input {
+  width: 50%;
+  float: left;
+}
+
+.Add-Box  button {
+  width: 50%;
+  float: left;
+}
+
+
