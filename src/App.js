@@ -1,6 +1,6 @@
 import './App.css';
 import Item from './Item'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function App() {
 
@@ -8,17 +8,33 @@ function App() {
   const [value, setValue] = useState("");
 
   const addItem = () => {
-    if (list.findIndex((i) => i === value) !== -1) return;
+    if (list.findIndex((i) => i === value) !== -1) {
+      setValue("");
+      return;
+    }
     let temp = list;
     temp.push(value);
+    fetch("http://127.0.0.1:5000/add/" + value);
     setList(temp);
     setValue("");
   }
 
   const deleteItem = (name) => {
     let temp = list.filter((item) => item !== name);
+    fetch("http://127.0.0.1:5000/remove/" + name);
     setList(temp);
   }
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:5000/")
+    .then((res) => res.json())
+    .then((json) => {
+      console.log(json);
+      let temp = json.map((i) => i.item);
+      console.log(temp);
+      setList(temp);
+    });
+  }, []);
 
   return (
     <div className='App'>
