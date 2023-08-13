@@ -1,11 +1,12 @@
 import './item.css'
 
 function Item(props) {
+
     return (
       <div className='Row'>
         <p>{ props.name }</p>
         <input type="checkbox" />
-        <button></button>
+        <button onClick={() => props.deleteItem(props.name) }>X</button>
       </div>
     );
   }
