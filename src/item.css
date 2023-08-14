@@ -9,14 +9,9 @@
 
 p {
     text-align: center;
-    width: 50%;
+    width: 75%;
     float: left;
     color: #b6c2d6;
-}
-
-input {
-    width: 25%;
-    float: left;
 }
 
 button {

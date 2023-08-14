@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 
 function App() {
 
+  const addr = "http://10.0.0.68:5000";
+
   const [list, setList] = useState([]);
   const [value, setValue] = useState("");
 
@@ -14,19 +16,19 @@ function App() {
     }
     let temp = list;
     temp.push(value);
-    fetch("http://127.0.0.1:5000/add/" + value);
+    fetch(addr + "/add/" + value);
     setList(temp);
     setValue("");
   }
 
   const deleteItem = (name) => {
     let temp = list.filter((item) => item !== name);
-    fetch("http://127.0.0.1:5000/remove/" + name);
+    fetch(addr + "/remove/" + name);
     setList(temp);
   }
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/")
+    fetch(addr)
     .then((res) => res.json())
     .then((json) => {
       console.log(json);
