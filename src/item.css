@@ -14,7 +14,49 @@ p {
     color: #b6c2d6;
 }
 
+input {
+    margin: 4px;
+    padding: 4px;
+    border-radius: 4px;
+}
+
 button {
     width: 25%;
     float: left;
+    margin: 4px;
+    padding: 4px;
+    border-radius: 4px;
+    background: #a4afbf;
+    outline: none;
+    text-decoration: none;
+    box-shadow: none;
+    border: none;
+    color: black;
+}
+
+button:active {
+    background: #88919e;
+}
+
+@media screen and (max-width: 1000px) {
+    .Row {
+        display: flex;
+        width: 100%;
+        background-color: #4e545e;
+        padding: 5px;
+        border-radius: 4px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input {
+        padding: 2px;
+        border-radius: 2px;
+    }
+
+    button {
+        margin: auto;
+        padding: 2px;
+        border-radius: 2px;
+    }
 }
