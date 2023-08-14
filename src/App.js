@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react'
 
 function App() {
 
-  const addr = "http://10.0.0.68:5000";
-
   const [list, setList] = useState([]);
   const [value, setValue] = useState("");
+
+  const addr = process.env.REACT_APP_API_ADDR ? process.env.REACT_APP_API_ADDR : "http://localhost:5000";
 
   const addItem = () => {
     if (list.findIndex((i) => i === value) !== -1) {
@@ -36,7 +36,7 @@ function App() {
       console.log(temp);
       setList(temp);
     });
-  }, []);
+  }, [addr]);
 
   return (
     <div className='App'>
