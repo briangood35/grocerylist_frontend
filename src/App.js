@@ -7,7 +7,7 @@ function App() {
   const [list, setList] = useState([]);
   const [value, setValue] = useState("");
 
-  const addr = process.env.REACT_APP_API_ADDR ? process.env.REACT_APP_API_ADDR : "http://localhost:5000";
+  const addr = process.env.REACT_APP_API_ADDR ? process.env.REACT_APP_API_ADDR : "http://127.0.0.1:5000";
 
   const addItem = () => {
     if (list.findIndex((i) => i === value) !== -1) {
